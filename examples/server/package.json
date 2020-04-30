@@ -10,7 +10,8 @@
     "react-router": "^2.0.0",
     "react-router-redux": "^4.0.0",
     "redux": "^3.2.1",
-    "serialize-javascript": "^1.1.2"
+    "serialize-javascript": "^1.1.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -33,6 +34,9 @@
     "webpack-dev-middleware": "^1.5.1"
   },
   "scripts": {
-    "start": "babel-node server.js"
-  }
+    "start": "babel-node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
